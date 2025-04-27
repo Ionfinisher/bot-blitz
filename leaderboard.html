@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Top 10 games records</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/leaderboard.css" />
+  </head>
+  <body>
+    <h1>Best Records</h1>
+
+    <table id="leaderboard">
+      <tr>
+        <th>Rank</th>
+        <th>Score</th>
+        <th>Best Combo</th>
+      </tr>
+    </table>
+
+    <a href="index.html" class="btn">Play Again</a>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+
+        highScores.sort((a, b) => b.score - a.score);
+
+        highScores = highScores.slice(0, 10);
+
+        const table = document.getElementById("leaderboard");
+
+        const goldMedal = "assets/flat_medal4.png";
+        const silverMedal = "assets/flat_medal3.png";
+        const bronzeMedal = "assets/flat_medal2.png";
+        const medalStyle =
+          "width: 20px; height: 30px; vertical-align: middle; margin-left: 5px;";
+
+        highScores.forEach((entry, index) => {
+          const row = table.insertRow(-1);
+          const rankCell = row.insertCell(0);
+          const rank = index + 1;
+          let rankContent = rank;
+
+          if (rank === 1) {
+            rankContent = `${rank} <img src="${goldMedal}" alt="Gold Medal" style="${medalStyle}">`;
+          } else if (rank === 2) {
+            rankContent = `${rank} <img src="${silverMedal}" alt="Silver Medal" style="${medalStyle}">`;
+          } else if (rank === 3) {
+            rankContent = `${rank} <img src="${bronzeMedal}" alt="Bronze Medal" style="${medalStyle}">`;
+          }
+          rankCell.innerHTML = rankContent;
+
+          const scoreCell = row.insertCell(1);
+          scoreCell.textContent = entry.score;
+
+          const comboCell = row.insertCell(2);
+          comboCell.textContent = entry.combo;
+        });
+
+        if (highScores.length === 0) {
+          const row = table.insertRow(-1);
+          const cell = row.insertCell(0);
+          cell.colSpan = 4;
+          cell.textContent = "No scores yet. Be the first to play!";
+          cell.style.textAlign = "center";
+        }
+      });
+    </script>
+  </body>
+</html>

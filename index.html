@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Blitz - Robot Match 3 Game</title>
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <svg viewBox="0 0 450 70">
+        <text class="svgText jua-regular" x="10" y="45">BOT BLITZ</text>
+      </svg>
+      <h2>Welcome to Bot Blitz!</h2>
+      <p>
+        Get ready to match and blast your way through a world of robots! In this
+        exciting match-3 game, you'll need to swap and match colorful robot
+        parts to clear the board and score big points in just 2 minutes.
+      </p>
+      <p>Can yo beat the clock and score big?</p>
+      <div class="button-group">
+        <button onclick="startGame()">
+          Play Now
+          <img src="assets/play-icon.png" width="32" alt="Play Icon" />
+        </button>
+        <button onclick="location.href='leaderboard.html'">
+          Records
+          <img
+            src="assets/leaderboard-icon.png"
+            width="32"
+            alt="Leaderboard Icon"
+          />
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="image-container perspective">
+        <img src="assets/background.png" alt="Bot Blitz Game Screenshot" />
+      </div>
+    </div>
+
+    <script>
+      function startGame() {
+        window.location.href = "game.html";
+      }
+    </script>
+  </body>
+</html>
