@@ -6,6 +6,16 @@ Welcome to **Bot Blitz**, the electrifying match-3 game where you swap colorful 
 
 Get ready to match and blast your way through a grid of quirky robots. You've got just **two minutes** to rack up the highest score possible. Can you beat the clock and become the ultimate Bot Blitzer?
 
+## 📸 Screenshots
+
+Desktop View Screenshot
+
+![Desktop View  Screenshot](assets/web-screenshot.png)
+
+Mbile View Screenshot
+
+![Mobile view Screenshot](assets/mobile-screenshot.jpg)
+
 ## 🚀 Features
 
 - **Classic Match-3 Fun:** Swap adjacent bots to create lines of 3 or more identical bots.
@@ -26,7 +36,8 @@ Get ready to match and blast your way through a grid of quirky robots. You've go
     - Alternatively, click and drag a bot towards an adjacent one to swap.
 3.  **Match:** If the swap creates a line of 3 or more identical bots (horizontally or vertically), they'll be destroyed, and new bots will fall into place.
 4.  **Score:** Earn points for every match. Matching more than 3 bots or causing chain reactions (combos) earns bonus points!
-5.  **Time's Up!:** When the timer hits zero, the game ends, your score is saved, and you'll be taken to the records screen.
+5.  **Time's Up!:** When the timer hits zero, the game ends, your score is saved
+    , and you'll be taken to the records screen.
 
 ## 🛠️ How to Run Locally
 
