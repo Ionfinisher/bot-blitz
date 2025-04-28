@@ -12,9 +12,9 @@ Desktop View Screenshot
 
 ![Desktop View  Screenshot](assets/web-screenshot.png)
 
-Mbile View Screenshot
+Mobile View Screenshot
 
-![Mobile view Screenshot](assets/mobile-screenshot.jpg)
+<img src="assets/mobile-screenshot.jpg" alt="Mobile view Screenshot" width="300"/>
 
 ## 🚀 Features
 
